@@ -1,0 +1,34 @@
+user configuration commands
+
+git config —global user.name “userName“
+
+git config —global user.email  “userEmail“
+
+git config —list
+
+-----------------------------
+echo "" >> usedCommand.txt
+cat usedCommand.txt
+-----------------------------
+git init        ---> to initialize a new git repository
+git status      ---> not at first the files is untracked yet, Because I am not use "git add" commant for any object yet.
+git add         ---> upload the files to staging area (index) and make it tracked if it isn't commited before, else make it modefied.
+git add *      --> add all files
+git add *.txt  --> add all files with that extention
+git add f* 
+git rm --cahed <file> --> unstage: remove the files from staging area (index).
+-----------------------------
+ls                         --> to see my files in working Tree (Directory)
+ls -al                     --> for showing headen files
+git ls-files               --> to see the work in staging area (index)
+git ls-files -s            -—> to see the SHA-1 of the founded files
+find .git/objets/ -type f  --> git the objects commited in repository (the third place)
+git cat-file -t <40_SHA-1_chars>  --> to get the type of an object 
+git cat-file -s <40_SHA-1_chars>  --> to get the size of an object 
+git cat-file -p <40_SHA-1_chars>  --> to get the content of an object 
+git commit -m "initial commit"    --> commit all objects in staging area (index).
+------------------------------
+cd .git
+cd objects
+ls -al  --- > no object found, because I not commit any objects before
+------------------------------
