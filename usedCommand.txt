@@ -6,17 +6,21 @@ git config —global user.email  “userEmail“
 
 git config —list
 
+git config --global core.editor "vim"  --> to open an editor to write your commit message instead of -m option.
 -----------------------------
 echo "" >> usedCommand.txt
 cat usedCommand.txt
 -----------------------------
 git init        ---> to initialize a new git repository
 git status      ---> not at first the files is untracked yet, Because I am not use "git add" commant for any object yet.
+git status -s   ---> summary the status of files 
 git add         ---> upload the files to staging area (index) and make it tracked if it isn't commited before, else make it modefied.
 git add *      --> add all files
 git add *.txt  --> add all files with that extention
 git add f* 
-git rm --cahed <file> --> unstage: remove the files from staging area (index).
+git rm --cahed <file>    --> unstage: remove the files from staging area (index).
+git diff <file>          --> get the difference between all files in workingTree and staging area (index) at the current Tree (folder,directory)
+git diff --staged <file> --> get the difference between all files in staging area (index) and a Commit at Repo
 -----------------------------
 ls                         --> to see my files in working Tree (Directory)
 ls -al                     --> for showing headen files
@@ -27,6 +31,9 @@ git cat-file -t <40_SHA-1_chars>  --> to get the type of an object
 git cat-file -s <40_SHA-1_chars>  --> to get the size of an object 
 git cat-file -p <40_SHA-1_chars>  --> to get the content of an object 
 git commit -m "initial commit"    --> commit all objects in staging area (index).
+git log                    --> get history of the Repo
+git restore <file>         --> (to discard changes in working directory).
+git restore --staged <file>--> to unstage file
 ------------------------------
 cd .git
 cd objects
