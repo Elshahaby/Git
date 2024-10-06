@@ -7,6 +7,8 @@ git config —global user.email  “userEmail“
 git config —list
 
 git config --global core.editor "vim"  --> to open an editor to write your commit message instead of -m option.
+10: press esc, 20: type: :wq ,30: press enter --> to save the message and exit vim
+type: qa! and press <Enter> to abandon all changes and exit vim
 -----------------------------
 echo "" >> usedCommand.txt
 cat usedCommand.txt
@@ -21,6 +23,7 @@ git add f*
 git rm --cahed <file>    --> unstage: remove the files from staging area (index).
 git diff <file>          --> get the difference between all files in workingTree and staging area (index) at the current Tree (folder,directory)
 git diff --staged <file> --> get the difference between all files in staging area (index) and a Commit at Repo
+git diff <SHA-1C>..<SHA-1C>  --> get the difference between the two commits using the SHA-1 of them. 
 -----------------------------
 ls                         --> to see my files in working Tree (Directory)
 ls -al                     --> for showing headen files
@@ -32,6 +35,11 @@ git cat-file -s <40_SHA-1_chars>  --> to get the size of an object
 git cat-file -p <40_SHA-1_chars>  --> to get the content of an object 
 git commit -m "initial commit"    --> commit all objects in staging area (index).
 git log                    --> get history of the Repo
+-- git log filltaration --
+git log --oneline
+git log -- <file>
+git log --oneline -- <file>
+git show <SHA-1_for_commit>  
 git restore <file>         --> (to discard changes in working directory).
 git restore --staged <file>--> to unstage file
 ------------------------------
