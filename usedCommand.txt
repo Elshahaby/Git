@@ -24,6 +24,7 @@ git rm --cahed <file>    --> unstage: remove the files from staging area (index)
 git diff <file>          --> get the difference between all files in workingTree and staging area (index) at the current Tree (folder,directory)
 git diff --staged <file> --> get the difference between all files in staging area (index) and a Commit at Repo
 git diff <SHA-1C>..<SHA-1C>  --> get the difference between the two commits using the SHA-1 of them. 
+git diff 37ce708..HEAD       --> diff between a commit and the commit that HEAD point at.
 -----------------------------
 ls                         --> to see my files in working Tree (Directory)
 ls -al                     --> for showing headen files
@@ -34,7 +35,10 @@ git cat-file -t <40_SHA-1_chars>  --> to get the type of an object
 git cat-file -s <40_SHA-1_chars>  --> to get the size of an object 
 git cat-file -p <40_SHA-1_chars>  --> to get the content of an object 
 git commit -m "initial commit"    --> commit all objects in staging area (index).
+git commit -am "message"
+git commit --amend                --> to modify the last commit message
 git log                    --> get history of the Repo
+git reflog                 --> show the changes of moving the HEAD pointer from commit to another.
 -- git log filltaration --
 git log --oneline
 git log -- <file>

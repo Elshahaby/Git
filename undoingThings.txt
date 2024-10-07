@@ -1,0 +1,19 @@
+rm -rf .git/             --> delete the repo from my file
+git rm --cahed <file>    --> unstage: remove the files from staging area (index) (make the file untracked if it is not commited before in repo).
+git restore <file>       --> if I modefy the file in workingTree so the file is red modified 
+                             (means that the file is modified in workingTree only, not in staged area or repo)
+                             we use that command to restore the last staged and commited version of the modified file.
+                             to discard changes in working directory (Tree)
+                             Ex: if I write a new line in a file that command restore the file and delete that added line.      
+                             workingTree != staging area && workingTree != Repo
+git restore --staged <file>  --> to unstage ,changes in --> workingTree == staging area && staging area != Repo
+git commit --amend           --> to modify the last commit message
+git reset HEAD               --> move the updates from repo to staging area (index)
+git reset HEAD --hard        --> move the updates from repo to workingTree dirctly.  Danger(change the physcal files in WT) 
+git reset HEAD~<numVerBack>  --> roleBack to old a commit  (move the Head pointer back)
+git reset --hard HEAD~1      --> change the physical files at WorkingTree to the files founded in the moved commit in one step.
+git reset HEAD@{1}           --> roleForward (fastforward) to a commit   (move the Head pointer forward)
+git reset --hard HEAD@{1}
+git diff 37ce708..HEAD       --> diff between a commit and the commit that HEAD point at.
+git reflog                   --> show the changes of moving the HEAD pointer from commit to another.
+
