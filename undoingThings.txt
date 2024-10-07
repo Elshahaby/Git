@@ -17,3 +17,11 @@ git reset --hard HEAD@{1}
 git diff 37ce708..HEAD       --> diff between a commit and the commit that HEAD point at.
 git reflog                   --> show the changes of moving the HEAD pointer from commit to another.
 
+-----------------------------------
+
+===> to rollback in old commit and show its files in my working Tree
+Ex: lets say that I want to back to the last commit so, we use these commands
+git reset HEAD~1     ---> go to last commit and clone the data to staged area (index)
+git restore *        ---> restore all files of the last commit that founded in stagged area (index) to my workingTree.
+
+-----------------------------------
