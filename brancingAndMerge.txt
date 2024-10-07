@@ -1,0 +1,25 @@
+git branch            --> show your all branches in repo
+git branch <name>     --> create a branch starting from the current commit
+git branch --merged   --> show the branches that allready merged to the current branch (master branch if I stand on master).
+
+====>  after merge, may be delete that branch
+
+git branch -d <branch_name>   --> to delete a branch
+-----------------------
+
+====> switching branches : make the HEAD point to that branch 
+
+git switch <branch_name> 
+git show HEAD
+
+------------------------
+
+====> Merge branch to master
+
+1. git switch master           --> to go to master branch if you are not.
+2. git merge <branch_name>     --> merge the branch you want to the master branch
+ 
+------------------------- 
+ 
+===>  Try to see an exersice for The Three Way Merge
+===> Conflict when you merge, if you modify same file in the two merged branches (see an exersice)
