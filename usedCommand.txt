@@ -40,12 +40,13 @@ git commit --amend                --> to modify the last commit message
 git log                    --> get history of the Repo
 git reflog                 --> show the changes of moving the HEAD pointer from commit to another.
 -- git log filltaration --
-git log --oneline
+git log --oneline -<numberYouNeed>
 git log -- <file>
 git log --oneline -- <file>
-git show <SHA-1_for_commit>  
+git show <SHA-1_for_commit>     --> show details about the commit
 git restore <file>         --> (to discard changes in working directory).
 git restore --staged <file>--> to unstage file
+alies graph="git log --oneline --all --graph --decorate"
 ------------------------------
 cd .git
 cd objects

@@ -1,6 +1,9 @@
 git branch            --> show your all branches in repo
 git branch <name>     --> create a branch starting from the current commit
 git branch --merged   --> show the branches that allready merged to the current branch (master branch if I stand on master).
+git branch -v         --> get the branches and SHA-1 of commit thet stand at.
+git branch -vv        --> track each branch in local-repo with each branch in remote-repo
+git branch -M <newName>  --> rename the current branch.
 
 ====>  after merge, may be delete that branch
 
@@ -22,4 +25,20 @@ git show HEAD
 ------------------------- 
  
 ===>  Try to see an exersice for The Three Way Merge
-===> Conflict when you merge, if you modify same file in the two merged branches (see an exersice)
+===> Conflict when you merge, if you modify same file in the two merged branches (see an exersice) and try to resolve the conflict
+
+-------------------------
+
+if you create a branch in (local) and it is not created before in (Remote) when you push the modification 
+git push origin   is wrong command, Because the branch added in local has no upstream branch in Remote.
+gir push -u(--set-upstream) origin <branch_name>   --> push the local branch and set the remote as upstream.  
+
+--------------------------  
+
+working with remote
+
+git clone <path> (putName)    --> git clone from a Remote Repo and work on it in your local (you could put another name to your local repo if you want)
+git remote                    --> show all remotes repos you have in current local repo
+git remote -v
+git remote add
+git remote -h
