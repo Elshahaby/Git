@@ -1,1 +1,8 @@
 start form working with remotes section and add commands
+
+git remote add <name> <url> --> add a remote repo and name it as you want   
+git remote -h               --> to help you find all options
+
+--------------
+
+git push <remote_name> <branch_name>     --> Ex: git push origin main
