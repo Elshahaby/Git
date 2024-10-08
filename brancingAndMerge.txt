@@ -31,7 +31,7 @@ git show HEAD
 
 if you create a branch in (local) and it is not created before in (Remote) when you push the modification 
 git push origin   is wrong command, Because the branch added in local has no upstream branch in Remote.
-gir push -u(--set-upstream) origin <branch_name>   --> push the local branch and set the remote as upstream.  
+git push -u(--set-upstream) origin <branch_name>   --> push the local branch and set the remote as upstream.  
 
 --------------------------  
 
