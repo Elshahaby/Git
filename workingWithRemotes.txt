@@ -6,3 +6,4 @@ git remote -h               --> to help you find all options
 --------------
 
 git push <remote_name> (<branch_name>)     --> Ex: git push origin main
+git push -h
