@@ -8,3 +8,20 @@ git remote -h               --> to help you find all options
 git push <remote_name> (<branch_name>)     --> Ex: git push origin main
 git push -h
 git push --repo
+
+--------------
+
+ERORR :-
+From https://github.com/Elshahaby/Team-Members-Dashboard
+ * branch            main       -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
+Description:-
+This error usually occurs if your local repository and the remote repository don’t share a common history, which can happen if you initialized the repository locally and then tried to link it to a remote repository with an existing history.
+
+To fix this, you can use the --allow-unrelated-histories option when pulling, which will force Git to merge the two separate histories:
+
+COMMAND:-
+--->> git pull origin main --allow-unrelated-histories
+
+--------------------------------
